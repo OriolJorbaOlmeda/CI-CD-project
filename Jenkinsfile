@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Exposing Dockerfile') {
             steps {
-                echo 'sh docker run -d -p 5000:5000 flask-app''
+                echo 'sh 'docker run -d -p 5000:5000 flask-app''
             }
         }
     }
