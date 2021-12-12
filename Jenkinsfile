@@ -11,7 +11,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'python demo.py'
+                
+                echo "sh 'python demo.py'"
             }
         }
         stage('Test') {
