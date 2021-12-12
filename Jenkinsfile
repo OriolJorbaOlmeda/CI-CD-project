@@ -30,5 +30,11 @@ pipeline {
                 echo "sh 'docker run -d -p 5000:5000 flask-app'"
             }
         }
+        stage('Pulling Docker Image') {
+            steps {
+                echo "sh 'docker tag 1dc406cc8795 flask-app:1.0'"
+                echo "sh 'docker push oriol8/flask-app:1.0'"
+            }
+        }
     }
 }
