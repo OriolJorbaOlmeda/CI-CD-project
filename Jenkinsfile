@@ -11,13 +11,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'pip install --user -r requirements.txt'
-                sh 'python demo.py'
+                echo "sh 'pip install --user -r requirements.txt'"
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo "sh 'python test.py'
             }
         }
         stage('Deploy') {
