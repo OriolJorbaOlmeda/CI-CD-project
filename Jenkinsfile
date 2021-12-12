@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    enviroment {
+    environment {
         CI = 'true'
-    }
+      }
     stages {
         stage('Clonning') {
             steps {
@@ -25,4 +25,4 @@ pipeline {
             }
         }
     }
-}
+}}
