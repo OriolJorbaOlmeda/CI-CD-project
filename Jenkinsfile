@@ -11,8 +11,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                
-                echo "sh 'python demo.py'"
+                sh 'pip install --user -r requirements.txt'
+                sh 'python demo.py'
             }
         }
         stage('Test') {
