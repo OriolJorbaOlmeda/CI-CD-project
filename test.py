@@ -1,14 +1,9 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-import unittest
-import demo
+# test.py
+from demo import app
 
 
-class TestMyModule(unittest.TestCase):
+def test_hello():
+    response = app.test_client().get('/')
 
-    def test_sum(self):
-        self.assertEqual(demo.sum(5, 7), 12)
-
-
-if __name__ == "__main__":
-    unittest.main()
+    assert response.status_code == 200
+    assert response.data == b'Hello, World!'
