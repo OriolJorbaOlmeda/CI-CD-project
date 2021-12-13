@@ -32,8 +32,8 @@ pipeline {
         }
         stage('Pulling Docker Image') {
             steps {
-                echo "sh 'docker tag 1dc406cc8795 flask-app:1.0'"
-                echo "sh 'docker push oriol8/flask-app:1.0'"
+                echo "sh 'docker tag flask-oriol:1.0 oriol8/flask-app:flask-oriol:1.0'"
+                echo "sh 'docker push oriol8/flask-app'"
             }
         }
     }
