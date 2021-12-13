@@ -36,5 +36,16 @@ pipeline {
                 echo "sh 'docker push oriol8/flask-app'"
             }
         }
+        stage('Creating Kuberentes Deployment') {
+            steps {
+                echo "sh 'kubectl apply -f .\deploy.yaml'"
+            }
+        }
+        stage('Creating Kuberentes Service') {
+            steps {
+                echo "sh 'kubectl apply -f .\service.yaml'"
+            }
+        }
+        
     }
 }
