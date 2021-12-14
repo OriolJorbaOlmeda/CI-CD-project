@@ -12,7 +12,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo "sh 'pip install --user -r requirements.txt'"
-                echo "sh 'pip install Flask'"
             }
         }
         stage('Test') {
