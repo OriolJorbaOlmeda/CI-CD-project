@@ -38,12 +38,12 @@ pipeline {
         }
         stage('Creating Kuberentes Deployment') {
             steps {
-                echo "sh 'kubectl apply -f .\deploy.yaml'"
+                echo "sh 'kubectl apply -f deploy.yaml'"
             }
         }
         stage('Creating Kuberentes Service') {
             steps {
-                echo "sh 'kubectl apply -f .\service.yaml'"
+                echo "sh 'kubectl apply -f service.yaml'"
             }
         }
         
