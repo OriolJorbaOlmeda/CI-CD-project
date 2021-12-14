@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "sh 'python test.py'"
+                echo "sh 'pytest test.py'"
             }
         }
         stage('Creating Dockerfile') {
@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Pulling Docker Image') {
             steps {
-                echo "sh 'docker tag flask-oriol:1.0 oriol8/flask-app:flask-oriol:1.0'"
+                echo "sh 'docker tag flask-oriol oriol8/flask-app:flask-oriol'"
                 echo "sh 'docker push oriol8/flask-app'"
             }
         }
