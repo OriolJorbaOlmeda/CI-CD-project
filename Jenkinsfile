@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo "sh 'pip install --user -r requirements.txt'"
+                echo "sh 'virtualenv venv && . venv/bin/activate && pip install -r requirements.txt'"
             }
         }
         stage('Test') {
